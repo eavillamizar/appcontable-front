@@ -1,0 +1,22 @@
+mat-form-field,
+input {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+form {
+  margin-top: 1rem; /* 1rem = medida estandar equivalente a 16pixeles */
+  margin-bottom: 1rem; /* margen en la parte baja de este componente */
+}
+
+input[type="file"]{
+  visibility: hidden;
+}
+
+.image-preview {
+  height:5rem;
+}
+
+.image-preview img{
+  height: 100%;
+}

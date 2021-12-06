@@ -1,0 +1,17 @@
+<h1>REGISTRO CUENTAS MAESTRAS</h1>
+<form (submit)="saveMae(postForm)" #postForm="ngForm"> <!--por medio del evento submit ejecuto la funcion addPost -->
+  <mat-form-field>
+    <mat-label>Codigo</mat-label>
+    <input type="text" matInput [ngModel]="mae.codigo" codigo="ngModel" name="codigo" required/>
+    <mat-error>{{ getErrorMessage }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input type="text" matInput [ngModel]="mae.nombre" nombre="ngModel" name="nombre" required/>
+    <mat-error>{{ getErrorMessage }}</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary">Guardar</button>
+
+</form>

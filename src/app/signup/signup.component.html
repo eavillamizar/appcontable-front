@@ -1,0 +1,27 @@
+<h1>REGISTRO DE USUARIOS</h1>
+
+<mat-card>
+  <form (submit) = "onSignup(UseForm)" #UseForm="ngForm">
+    <mat-form-field>
+      <mat-label>Nombre</mat-label>
+      <input matInput [ngModel]="user.name" #name="ngModel" name="name" required/>
+      <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>E-mail</mat-label>
+      <input matInput [ngModel]="user.email" #email="ngModel" name="email" required type="email" email />
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Contraseña</mat-label>
+      <input matInput [ngModel]="user.password" #password="ngModel" name="password" required type="password" />
+      <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary">Registrarme</button>
+  </form>
+
+</mat-card>
+

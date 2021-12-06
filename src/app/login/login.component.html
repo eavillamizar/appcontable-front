@@ -1,0 +1,23 @@
+<h1>LOGIN DE USUARIOS</h1>
+
+<mat-card>
+  <form (submit) = "onLogin(UseForm)" #UseForm="ngForm">
+
+    <mat-form-field>
+      <mat-label>E-mail</mat-label>
+      <input matInput [ngModel]="user.email" #email="ngModel" name="email" required type="email" email />
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Contraseña</mat-label>
+      <input matInput [ngModel]="user.password" #password="ngModel" name="password" required type="password" />
+      <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary">Login</button>
+  </form>
+
+</mat-card>
+
+

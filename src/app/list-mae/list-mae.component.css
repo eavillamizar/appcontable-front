@@ -1,0 +1,15 @@
+mat-card {
+  margin-top: 1rem;
+}
+
+.p-m-t {
+  margin-top: 1rem;
+}
+
+.post-image {
+  width: 40%;
+}
+
+.post-image img {
+  width: 100%;
+}
